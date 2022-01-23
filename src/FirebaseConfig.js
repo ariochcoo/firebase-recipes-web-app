@@ -1,17 +1,34 @@
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const config = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  apiKey: "AIzaSyDcsFTgbtQ8yjigMePa_Le3F5sYL8rNO6U",
+  authDomain: "fir-recipes-7227e.firebaseapp.com",
+  projectId: "fir-recipes-7227e",
+  storageBucket: "fir-recipes-7227e.appspot.com",
+  messagingSenderId: "865869720410",
+  appId: "1:865869720410:web:58688145f15b04b8a76163",
+  measurementId: "G-ZGNFFE0F2F",
+};
+//Version 8
+const classicFirebaseApp = firebase.initializeApp(config);
+//const auth = classicFirebaseApp.auth();
+//const firestore = classicFirebaseApp.firestore();
+const storage = classicFirebaseApp.storage();
+
+//version 9
+const firebaseApp = initializeApp(config);
+const auth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
+const firebaseConfig = {
+  auth,
+  firestore,
+  storage,
 };
 
-if (!firebase.app.length) {
-  firebase.initializeApp(config);
-}
-
-export default firebase;
+export default firebaseConfig;
