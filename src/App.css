@@ -41,7 +41,7 @@
   font-family: "Roboto", sans-serif;
 }
 html {
-  background: #f3c14f;
+  background-image: linear-gradient(to top left, #a05ead 0%, #4acf61 100%);
 }
 .App {
   display: flex;
@@ -75,7 +75,7 @@ html {
 }
 .App .main .recipe-list-box {
   width: 70rem;
-  background: #039be5;
+  background: #b12d54;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +83,7 @@ html {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0.1rem 0.1rem 1rem 0.1rem #039be5;
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem #171818;
 }
 .App .main .recipe-list-box .no-recipes {
   color: #fff;
@@ -99,12 +99,12 @@ html {
   margin-right: 1rem;
   margin-bottom: 1rem;
   width: 17rem;
-  background: #f3c14f;
+  background: #dbdf0ad8;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0.2rem 0.2rem 0.15rem 0.1rem #f3c14f;
+  box-shadow: 0.2rem 0.2rem 0.15rem 0.1rem #1b0c05;
 }
 .App .main .recipe-list .recipe-card .unpublished {
   font-size: 2rem;
@@ -279,7 +279,7 @@ html {
   margin-bottom: 0.5rem;
 }
 .primary-button {
-  background: #039be5;
+  background: #62a0d3;
   color: #fff;
   border: 0.1rem solid transparent;
   outline: none;
